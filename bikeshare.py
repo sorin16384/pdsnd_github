@@ -106,8 +106,14 @@ def spell_check(word):
 
 def options_str(options):
     """
+    Args:
+    (list) options - an list that contains the options
+
     Takes an iterable and returns it as a string in title case joined by commas.
     The main point of it being to get rid of the square brackets
+
+    Returns:
+    (str) A string with the options in quotes separated by commas 
     """
     return ', '.join(["'" + a.title() + "'" for a in options])
 
