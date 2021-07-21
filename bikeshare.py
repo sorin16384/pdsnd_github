@@ -273,11 +273,15 @@ def time_stats(df):
     # is in Chicago in April
     # or in Washington in January
 
+    common_day = df['Day Of Week'].mode()[0]
+    common_overall_hour = df['Hour'].mode()[0]
+    common_hour_of_common_day = df[df['Day Of Week'] == common_day]['Hour'].mode()[0]
+
     if (list(df['Day Of Week']).count(df['Day Of Week'].iloc[0]) != len(df) and
-            df[df['Day Of Week'] == df['Day Of Week'].mode()[0]]['Hour'].mode()[0] != df['Hour'].mode()[0]):
+            common_hour_of_common_day != common_overall_hour):
         print("Particularly interesting, {}'s top hour is {}".format(
-            df['Day Of Week'].mode()[0],
-            df[df['Day Of Week'] == df['Day Of Week'].mode()[0]]['Hour'].mode()[0]))
+            common_day,
+            common_hour_of_common_day))
 
     print("\nThis took %s seconds." % round((time.time() - start_time), 5))
     print('-'*100)
