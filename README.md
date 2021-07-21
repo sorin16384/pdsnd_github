@@ -8,7 +8,7 @@ My first Github contribution
 
 ### Description
 This project consists in simulating a realistic workflow to test and demonstrate my
-knowlodge on Git and Github.
+knowledge on Git and Github.
 
 ### Files used
 The project uses the bikeshare.py that is a Python script that when executed,
