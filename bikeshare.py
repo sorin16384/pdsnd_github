@@ -3,9 +3,9 @@ import pandas as pd  # my version 1.2.4
 import numpy as np  # my version 1.20.2
 
 
-CITY_DATA = {'chicago': 'chicago.csv',
-             'new york city': 'new_york_city.csv',
-             'washington': 'washington.csv'}
+CITY_DATA = {'chicago': 'data/chicago.csv',
+             'new york city': 'data/new_york_city.csv',
+             'washington': 'data/washington.csv'}
 
 ERROR_MESSAGES = np.array([' Ha! Ha! You are funny !', 'Well that didn\'t work',
                           'Let\'s try that again.. Properly this time. Look at the options again please.',
@@ -284,11 +284,15 @@ def time_stats(df):
     # is in Chicago in April
     # or in Washington in January
 
+    common_day = df['Day Of Week'].mode()[0]
+    common_overall_hour = df['Hour'].mode()[0]
+    common_hour_of_common_day = df[df['Day Of Week'] == common_day]['Hour'].mode()[0]
+
     if (list(df['Day Of Week']).count(df['Day Of Week'].iloc[0]) != len(df) and
-            df[df['Day Of Week'] == df['Day Of Week'].mode()[0]]['Hour'].mode()[0] != df['Hour'].mode()[0]):
+            common_hour_of_common_day != common_overall_hour):
         print("Particularly interesting, {}'s top hour is {}".format(
-            df['Day Of Week'].mode()[0],
-            df[df['Day Of Week'] == df['Day Of Week'].mode()[0]]['Hour'].mode()[0]))
+            common_day,
+            common_hour_of_common_day))
 
     print("\nThis took %s seconds." % round((time.time() - start_time), 5))
     print('-'*100)
