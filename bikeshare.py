@@ -3,9 +3,9 @@ import pandas as pd  # my version 1.2.4
 import numpy as np  # my version 1.20.2
 
 
-CITY_DATA = {'chicago': 'chicago.csv',
-             'new york city': 'new_york_city.csv',
-             'washington': 'washington.csv'}
+CITY_DATA = {'chicago': 'data/chicago.csv',
+             'new york city': 'data/new_york_city.csv',
+             'washington': 'data/washington.csv'}
 
 ERROR_MESSAGES = np.array([' Ha! Ha! You are funny !', 'Well that didn\'t work',
                           'Let\'s try that again.. Properly this time. Look at the options again please.',
