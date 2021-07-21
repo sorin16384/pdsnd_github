@@ -11,7 +11,11 @@ This project consists in simulating a realistic workflow to test and demonstrate
 knowlodge on Git and Github.
 
 ### Files used
-Include the files used
+The project uses the bikeshare.py that is a Python script that when executed,
+ shows various statistics and information on the data from a bike rental company
+ in three major cities in US (Chicago, New York and Washington), based
+ on user selected filters.
+The data files are CSV format but will not be included)
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
