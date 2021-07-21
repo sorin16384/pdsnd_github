@@ -113,15 +113,20 @@ def options_str(options):
     The main point of it being to get rid of the square brackets
 
     Returns:
-    (str) A string with the options in quotes separated by commas 
+    (str) A string with the options in quotes separated by commas
     """
     return ', '.join(["'" + a.title() + "'" for a in options])
 
 
 def list_(tuple_list):
     """
+    Args:
+    (list) tuple_list - a list of tuples (trs-int pairs)
+
     Prints the list of tuples with two elements in a dictionary like, clean, manner,
         without parentheses, quotes or commas, skipping abnormal values.
+
+    Returns None
     """
     for tuple in tuple_list:
         # if it's not a tuple we're not interested
