@@ -18,4 +18,5 @@ The project uses the bikeshare.py that is a Python script that when executed,
 The data files are CSV format but will not be included)
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Special Thanks to Udacity and Udacity Team who designed the
+ "Programming For Data Science with Python" nanodegree program.
